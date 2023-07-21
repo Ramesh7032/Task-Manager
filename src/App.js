@@ -12,7 +12,7 @@ function App() {
 // Helli
  useEffect (() => {
     axios
-      .get('/user')
+      .get('https://node-taskmanager-sdjc.onrender.com/user')
       .then((response) => {
         setTasks(response.data);
       })
@@ -27,7 +27,7 @@ function App() {
       return;
     }
     axios
-      .post('/user', { title: newTask })
+      .post('https://node-taskmanager-sdjc.onrender.com/user', { title: newTask })
       .then((response) => {
         setTasks([...tasks, response.data]);
         setNewTask('');
@@ -39,7 +39,7 @@ function App() {
 
   const handleDeleteTask = (id) => {
     axios
-      .delete(`/user${id}`)
+      .delete(`https://node-taskmanager-sdjc.onrender.com/user${id}`)
       .then(() => {
         setTasks(tasks.filter((task) => task._id !== id));
       })
@@ -61,7 +61,7 @@ function App() {
     }
 
     axios
-      .put(`/user${id}`, { title: editedTask })
+      .put(`https://node-taskmanager-sdjc.onrender.com/user${id}`, { title: editedTask })
       .then((response) => {
         setTasks(
           tasks.map((task) =>
