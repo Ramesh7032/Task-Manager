@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Ramesh7032.github.io/Task-Manager1",
+ 
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -15,7 +15,7 @@
     "react-tooltip": "^5.18.1",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "https://api-tm.onrender.com",
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
