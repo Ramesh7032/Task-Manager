@@ -12,7 +12,7 @@ function App() {
   // Helli
   useEffect(() => {
     axios
-      .get("https://api-tm.vercel.app//user")
+      .get("https://api-tm.vercel.app/user")
       .then((response) => {
         setTasks(response.data);
       })
@@ -27,7 +27,7 @@ function App() {
       return;
     }
     axios
-      .post("https://api-tm.vercel.app//user", { title: newTask })
+      .post("https://api-tm.vercel.app/user", { title: newTask })
       .then((response) => {
         setTasks([...tasks, response.data]);
         setNewTask("");
@@ -39,7 +39,7 @@ function App() {
 
   const handleDeleteTask = (id) => {
     axios
-      .delete(`https://api-tm.vercel.app//user${id}`)
+      .delete(`https://api-tm.vercel.app/user${id}`)
       .then(() => {
         setTasks(tasks.filter((task) => task._id !== id));
       })
@@ -61,7 +61,7 @@ function App() {
     }
 
     axios
-      .put(`https://api-tm.vercel.app//user${id}`, { title: editedTask })
+      .put(`https://api-tm.vercel.app/user${id}`, { title: editedTask })
       .then((response) => {
         setTasks(
           tasks.map((task) =>
